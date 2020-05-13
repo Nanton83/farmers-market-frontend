@@ -13,7 +13,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 
-// dispatching action Object to reducer, reducer decides what to update in our current store and return new version of store
+// dispatcher will send action Object to reducer, reducer decides what to update in our current store and return new version of store
 
 ReactDOM.render(
   <React.StrictMode>
