@@ -1,21 +1,30 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import MarketsContainer from './containers/MarketsContainer'
 
 
 class App extends React.Component {
 
-  // componentDidMount(){
-  //   fetch('http://localhost:3001/api/v1/items')
-  //   .then(response => response.json())
-  //   .then(jsondata => console.log(jsondata))
-  // }
+  componentDidMount(){
+  }
 
   render() {
     return (
       <div className="App">
-       App
+       <MarketsContainer/>
+       {/* <MarketForm/> */}
       </div>
     );
   }
 }
 
-export default App;
+// gives us access to see what is already in store
+// const mapStateToProps = (state) => {
+
+// }
+
+
+
+export default connect()(App);
+
+// fetchAccounts ability to dispatch new actions to store directly to compoenent
