@@ -14,9 +14,9 @@ class MarketsContainer extends React.Component {
     render(){
         return(
             <div>
+            <MarketForm/><br></br>
             <Markets markets={this.props.markets}/>
             {/* Sending to markets component */}
-            <MarketForm/>
             </div>
         )
     }
