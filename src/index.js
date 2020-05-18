@@ -4,6 +4,7 @@ import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 // thunk allows us to call dispatch from within action
 import { Provider } from 'react-redux'
+import {BrowserRouter as Router} from 'react-router-dom'
 import marketReducer from './reducers/marketReducer'
 
 import App from './App';
@@ -22,7 +23,10 @@ let store = createStore(marketReducer, composeEnhancers(applyMiddleware(thunk)))
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <Router>
+        {/* app and any child component can set up routes/links insided components */}
     <App />
+    </Router>
     </Provider>
     {/* Provider will make store global to app and any children */}
 

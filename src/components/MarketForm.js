@@ -25,6 +25,11 @@ class MarketForm extends React.Component {
         // sending state to addMarket
         this.props.addMarket(this.state)
         // submit button sends state
+        this.setState({
+            name: '', 
+            location: ''
+        })
+        // setState is asynchronous, it will not clear state until function is completed
 
     }
 
