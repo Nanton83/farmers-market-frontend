@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
+// Switch returns first path that matches
 import {fetchMarkets} from '../actions/fetchMarkets'
 import Markets from '../components/Markets'
 import Market from '../components/Market'
@@ -16,6 +17,7 @@ class MarketsContainer extends React.Component {
     render(){
         return(
             <div>
+                <Switch>
                 {/* Routing to different components */}
                 <Route path='/markets/new' component={MarketForm}/>
                 <Route path='/markets/:id' render={(routerProps) => <Market {...routerProps} markets={this.props.markets}/> } />
@@ -23,7 +25,7 @@ class MarketsContainer extends React.Component {
                 <Route exact path='/markets' render={(routerProps) => <Markets {...routerProps} markets={this.props.markets}/> } />
                 {/* // Render takes in function, pass in component */}
                 {/* exact keyword, only show component if path exactly matches  */}
-            
+                </Switch>
             </div>
         )
     }
