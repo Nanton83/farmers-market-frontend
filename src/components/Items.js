@@ -5,7 +5,12 @@ import React from 'react'
 const Items = (props) => {
     return (
         <div>
-            Items
+            {/* if props.items is not undefined, it will iterate over items, they are sometimes undefined after a refresh/store refresh */}
+            {props.items && props.items.map(item => 
+            <li key={item.id}>
+                {item.name} - {item.price}
+            </li>    
+            )}
         </div>
     )
 }

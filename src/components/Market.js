@@ -8,8 +8,12 @@ import ItemsContainer from '../containers/ItemsContainer'
 const Market = (props) => {
 
 
-    let market = props.markets[props.match.params.id - 1]
+    // let market = props.markets[props.match.params.id - 1]
     // using router props and props passed in
+    
+    let market = props.markets.filter(market => market.id == props.match.params.id)[0]
+    // creates an array, good if path needs to be exact to id
+
 
     return (
         <div>
