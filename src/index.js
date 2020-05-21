@@ -21,17 +21,15 @@ let store = createStore(marketReducer, composeEnhancers(applyMiddleware(thunk)))
 // dispatcher will send action Object to reducer, reducer decides what to update in our current store and return new version of store
 
 ReactDOM.render(
-  <React.StrictMode>
+  
     <Provider store={store}>
       <Router>
         {/* app and any child component can set up routes/links insided components */}
     <App />
     </Router>
-    </Provider>
-    {/* Provider will make store global to app and any children */}
+    </Provider>,
+    // {/* Provider will make store global to app and any children */}
 
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  document.getElementById('root'));
 
 
