@@ -9,7 +9,7 @@ export const removeItem = (itemId, marketId) => {
             method: 'DELETE'
         })
         .then(response => response.json())
-        .then(market => dispatch({type: 'DELETE_ITEM', payload: market}))
+        .then(market => dispatch({type: 'REMOVE_ITEM', payload: market}))
 
     }
 
