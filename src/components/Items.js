@@ -1,18 +1,28 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {removeItem} from '../actions/removeItem'
 
-//functional component
 
-const Items = (props) => {
+
+class Items extends React.Component {
+
+    state = {}
+
+    handleRemoveItem = (item) => {
+        
+        this.props.removeItem(item.id, item.market_id)
+    }
+
+    render() {
     return (
         <div>
             {/* if props.items is not undefined, it will iterate over items, they are sometimes undefined after a refresh/store refresh */}
-            {props.items && props.items.map(item => 
-            <li key={item.id}>
-                {item.name} - {item.price}
-            </li>    
+            {this.props.items && this.props.items.map(item => 
+            <li key={item.id}>{item.name} - {item.price} <button onClick={() => this.handleRemoveItem(item)}>Remove Item</button></li>    
             )}
         </div>
-    )
+       )
+    }
 }
 
-export default Items
+export default connect(null, {removeItem})(Items)

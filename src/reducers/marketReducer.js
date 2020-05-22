@@ -20,6 +20,17 @@ export default function marketReducer(state = {markets: []}, action ) {
             }
         })
         return {...state, markets: markets}
+        case 'REMOVE_ITEM':
+            debugger;
+            let marketsRemove =  state.markets.map(market => {
+                if (market.id === action.payload.id) {
+                    return action.payload
+                } else {
+                return market 
+                }
+            })
+            return {...state, markets: marketsRemove}
+
         default:
             return state
     }
