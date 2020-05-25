@@ -16,7 +16,7 @@ const Market = (props) => {
 
 
     return (
-        <div>
+        <div class="container">
         <h2>
             {market ? market.name : null} - {market ? market.location : null}
            {/* if market exists, render name, or null */}

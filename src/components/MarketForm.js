@@ -36,7 +36,7 @@ class MarketForm extends React.Component {
 // Controlled Form
     render() {
         return(
-            <div>
+            <div class="container">
                 {/* handleSubmit is in form tag to submit entire form */}
                 <form onSubmit={this.handleSubmit}>
                     <label>Market Name: </label>
