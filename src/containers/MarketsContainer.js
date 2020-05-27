@@ -7,6 +7,7 @@ import Markets from '../components/Markets'
 import Market from '../components/Market'
 import MarketForm from '../components/MarketForm'
 import {Navigation} from '../components/Navigation'
+import Home from '../components/Home'
 
 
 class MarketsContainer extends React.Component {
@@ -21,6 +22,7 @@ class MarketsContainer extends React.Component {
                 
                 <Switch>
                 {/* Routing to different components */}
+                <Route exact path='/' component={Home}/>
                 <Route path='/markets/new' component={MarketForm}/>
                 <Route path='/markets/:id' render={(routerProps) => <Market {...routerProps} markets={this.props.markets}/> } />
                 {/* routerProps will automatically add routerprops into component (path, url params/dynamic path) */}
