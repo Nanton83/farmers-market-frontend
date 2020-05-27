@@ -25,8 +25,8 @@ ReactDOM.render(
     <Provider store={store}>
       <Router>
         {/* app and any child component can set up routes/links insided components */}
-    <App />
-    </Router>
+        <App />
+      </Router>
     </Provider>,
     // {/* Provider will make store global to app and any children */}
 

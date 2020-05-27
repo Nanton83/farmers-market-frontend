@@ -6,6 +6,7 @@ import {fetchMarkets} from '../actions/fetchMarkets'
 import Markets from '../components/Markets'
 import Market from '../components/Market'
 import MarketForm from '../components/MarketForm'
+import NavigationBar from '../components/NavigationBar'
 
 
 class MarketsContainer extends React.Component {
@@ -17,6 +18,7 @@ class MarketsContainer extends React.Component {
     render(){
         return(
             <div>
+                <NavigationBar/>
                 <Switch>
                 {/* Routing to different components */}
                 <Route path='/markets/new' component={MarketForm}/>

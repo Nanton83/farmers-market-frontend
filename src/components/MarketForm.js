@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addMarket} from '../actions/addMarket'
+import { Redirect } from 'react-router-dom';
 
 // wrapped in brackets since they were not exported as default
 
@@ -29,6 +30,8 @@ class MarketForm extends React.Component {
             name: '', 
             location: ''
         })
+        this.props.history.push('/markets')
+        
         // setState is asynchronous, it will not clear state until function is completed
 
     }
