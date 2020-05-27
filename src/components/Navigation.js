@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {NavLink} from 'react-router-dom'
 import {Navbar, Nav} from 'react-bootstrap'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import { Link } from 'react-router-dom'
 
 
 export class Navigation extends Component{
@@ -9,12 +10,12 @@ export class Navigation extends Component{
   render() {
     return(
       <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Your Farm</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/">Your Farm</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/markets">Markets</Nav.Link>
-          <Nav.Link href="/markets/new">Add Market</Nav.Link>
+          <Nav.Link as={Link} to="/markets">Markets</Nav.Link>
+          <Nav.Link as={Link} to="/markets/new">Add Market</Nav.Link>
           {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
