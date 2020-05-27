@@ -1,5 +1,5 @@
 .container {
-    background-color: whitesmoke;
+    background-color: #F8F9FA;
     margin: 0 auto;
     max-width: 700px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -38,3 +38,15 @@
     }
 }
 
+/* Links */
+
+
+a:visited {
+  color: green;
+}
+
+/* Fonts */
+
+*{
+  font-family:Verdana;
+}
