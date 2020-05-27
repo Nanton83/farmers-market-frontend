@@ -34,7 +34,7 @@
 
     .App-content {
         align-items: center;
-        justify-content: center;
+        justify-content: top;
     }
 }
 
