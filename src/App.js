@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux'
+
 import MarketsContainer from './containers/MarketsContainer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import desktopImage from './styles/images/farm_market_background.jpg';

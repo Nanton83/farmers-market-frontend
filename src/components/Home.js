@@ -9,7 +9,7 @@ const Home = () => {
 
     
     return( 
-        <div class="container" style={textStyle}>
+        <div className="container" style={textStyle}>
             <h1 >Welcome Berenstain Bear Family Farm</h1>
             <h2>494 East Quaker Town Road</h2>
             <h2>Bridgtown, West Virgina 28934</h2>

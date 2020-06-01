@@ -6,7 +6,7 @@ import {fetchMarkets} from '../actions/fetchMarkets'
 import Markets from '../components/Markets'
 import Market from '../components/Market'
 import MarketForm from '../components/MarketForm'
-import {Navigation} from '../components/Navigation'
+
 import Home from '../components/Home'
 
 
