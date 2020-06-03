@@ -32,4 +32,4 @@ ReactDOM.render(
 
   document.getElementById('root'));
 
-
+//This block is saying to render app at the root element

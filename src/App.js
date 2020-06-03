@@ -10,10 +10,10 @@ import {Navigation} from './components/Navigation'
 
 const App = () => {
   
-
+//returning JSX instead of regular html
   return (
       <div className="App" style={{backgroundImage: `url(${desktopImage})` }}>
-        <Navigation />
+        <Navigation /> 
           <div className="App-content">
           
           <MarketsContainer/>
