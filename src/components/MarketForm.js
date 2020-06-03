@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addMarket} from '../actions/addMarket'
 
-
+//class component - extends react.component
 // wrapped in brackets since they were not exported as default
 
 class MarketForm extends React.Component {
@@ -24,14 +24,14 @@ class MarketForm extends React.Component {
         // prevents re rendering page
         event.preventDefault()
         // sending state to addMarket
+
         this.props.addMarket(this.state)
-        // submit button sends state
         this.setState({
             name: '', 
             location: ''
         })
         this.props.history.push('/markets')
-        
+        //when form is submitted history.push will direct browser back to /markets
         // setState is asynchronous, it will not clear state until function is completed
 
     }

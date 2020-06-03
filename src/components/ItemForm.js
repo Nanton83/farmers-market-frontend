@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addItem} from '../actions/addItem'
 
+//class component - extends react.component
 // connect will dispatch action to reducer when create item is called 
 
 class ItemForm extends React.Component {
@@ -20,12 +21,15 @@ handleChange = (event) => {
     this.setState({
         [event.target.name]: event.target.value
         // evaluating value of event.target.name before setting it as key
+        // setState enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state
     })
 }
 
-handleSubmit = (event) => {
+handleSubmit = (event) => { // ABCDE   // ACBD
     event.preventDefault()
+    console.log('A')
     this.props.addItem(this.state, this.props.market.id)
+    console.log('B');        // submit button sends state
     this.setState({
         name: '',
         description: '',
@@ -57,3 +61,16 @@ handleSubmit = (event) => {
 }
 
 export default connect(null, {addItem})(ItemForm)
+
+// The connect() function connects a React component to a Redux store.
+
+// It provides its connected component with the pieces of the data it needs from the store, and the functions it can use to dispatch actions to the store.
+
+// It does not modify the component class passed to it; instead, it returns a new, connected component class that wraps the component you passed in.
+
+// connect accepts four different parameters, all optional. By convention, they are called:
+
+// mapStateToProps?: Function
+// mapDispatchToProps?: Function | Object
+// mergeProps?: Function
+// options?: Object

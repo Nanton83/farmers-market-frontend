@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {removeItem} from '../actions/removeItem'
 
 
-
+//functional component - do not have state or lifecycle methods
 const Items = (props) => {
 
     

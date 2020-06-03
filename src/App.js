@@ -10,7 +10,7 @@ import {Navigation} from './components/Navigation'
 
 const App = () => {
   
-//returning JSX instead of regular html
+//returning JSX instead of regular html  It is a syntax extension to JavaScript
   return (
       <div className="App" style={{backgroundImage: `url(${desktopImage})` }}>
         <Navigation /> 
@@ -24,4 +24,4 @@ const App = () => {
 
 export default App;
 
-// fetchAccounts ability to dispatch new actions to store directly to compoenent
+// fetchAccounts ability to dispatch new actions to store directly to component

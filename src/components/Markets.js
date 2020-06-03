@@ -4,6 +4,7 @@ import React from 'react'
 import {Route, Link} from 'react-router-dom'
 
 import '../styles/App.css';
+import Counter from '../components/Counter'
 
 
 
@@ -17,7 +18,7 @@ const Markets = (props) => {
                 {props.markets.map(market => 
                 // pass in key when iterating to avoid warnings
                 <li key={market.id}>
-                    <Link to={`/markets/${market.id}`}>{market.name}</Link>
+                    <Link to={`/markets/${market.id}`}>{market.name}</Link> - <Counter />
                     {/* Any props form click come from route */}
                     </li> )}
                 {/*  create market component accepting market as props */}
