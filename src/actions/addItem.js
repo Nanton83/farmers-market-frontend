@@ -1,7 +1,7 @@
 export const addItem = (item, marketId) => {
     console.log('C')
     return (dispatch) => {
-        fetch(`http://localhost:3001/api/v1/markets/${marketId}/items`, {
+        fetch(`https://farmers-market-backend.herokuapp.com//api/v1/markets/${marketId}/items`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,3 +22,6 @@ export const addItem = (item, marketId) => {
     console.log('E')
     // returning dispatch so we can use to dispatch to our reducer
 }
+
+// original fetch
+// `http://localhost:3001/api/v1/markets/${marketId}/items`

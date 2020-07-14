@@ -5,7 +5,7 @@ export const removeItem = (itemId, marketId) => {
     //Async request
 
     return (dispatch) => {
-        return fetch(`http://localhost:3001/api/v1/markets/${marketId}/items/${itemId}`, {
+        return fetch(`https://farmers-market-backend.herokuapp.com/api/v1/markets/${marketId}/items/${itemId}`, {
             method: 'DELETE'
         })
         .then(response => response.json())
@@ -14,3 +14,6 @@ export const removeItem = (itemId, marketId) => {
     }
 
 }
+
+// original fetch
+// `http://localhost:3001/api/v1/markets/${marketId}/items/${itemId}`

@@ -5,7 +5,7 @@ export const addMarket = (data) => {
     // thunk allows dispatch
     return (dispatch) => {
         
-        fetch('http://localhost:3001/api/v1/markets', {
+        fetch('https://farmers-market-backend.herokuapp.com/api/v1/markets', {
             headers: {
                 'Content-Type': 'application/json',
                 // Content sending down will be json
@@ -25,3 +25,6 @@ export const addMarket = (data) => {
     }
 
 }
+
+// original fetch
+// 'http://localhost:3001/api/v1/markets'
