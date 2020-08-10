@@ -5,6 +5,7 @@
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
     padding: 1em;
+    
   }
 
   .centerform {
@@ -25,6 +26,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 40px;
+    
 }
 
 @media (min-width: 650px ) {
@@ -35,6 +37,7 @@
     .App-content {
         align-items: center;
         justify-content: top;
+        
     }
 }
 

@@ -39,14 +39,15 @@ class MarketForm extends React.Component {
 // Controlled Form
     render() {
         return(
-            <div class="container">
+            <div class="container text-center">
+                <p class="h4 mb-4">Create A New Market</p>
                 {/* handleSubmit is in form tag to submit entire form */}
                 <form onSubmit={this.handleSubmit}>
-                    <label>Market Name: </label>
-                    <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
-                    <label>Market Location:</label>
-                    <input type='text' placeholder='Location' value={this.state.location} name="location" onChange={this.handleChange} /><br/>
-                    <input type='submit'/>
+                    {/* <label>Market Name: </label> */}
+                    <input class="form-control" type='text' placeholder='Market Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
+                    {/* <label>Market Location:</label> */}
+                    <input class="form-control" type='text' placeholder='Market Location' value={this.state.location} name="location" onChange={this.handleChange} />
+                    <input class="btn btn-info my-4 btn-block" type='submit'/>
                 </form>
             </div>
         )
