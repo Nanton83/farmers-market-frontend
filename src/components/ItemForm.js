@@ -42,19 +42,19 @@ handleSubmit = (event) => { // ABCDE   // ACBD
     render() {
         return (
             <div class="text-center">
-                <h5>Add New Item Here</h5>
-                <form onSubmit={this.handleSubmit}>
+                <p class="h4 mb-4">Add Items To Market</p>
+                <form  onSubmit={this.handleSubmit}>
                     {/* <label>Name:</label> */}
-                    <input type='text' placeholder='Name' name='name' value={this.state.name} onChange={this.handleChange}/><br/>
+                    <input class="form-control" type='text' placeholder='Name' name='name' value={this.state.name} onChange={this.handleChange}/><br/>
                     {/* <label>Description:</label> */}
-                    <input type='text' placeholder='Description' name='description' value={this.state.description} onChange={this.handleChange}/><br/>
+                    <input class="form-control" type='text' placeholder='Description' name='description' value={this.state.description} onChange={this.handleChange}/><br/>
                     {/* <label>Price:</label> */}
-                    <input type='text' placeholder='Price' name='price' value={this.state.price} onChange={this.handleChange}/><br/>
+                    <input class="form-control" type='text' placeholder='Price' name='price' value={this.state.price} onChange={this.handleChange}/><br/>
                     {/* <label>Amount Available:</label> */}
-                    <input type='text' placeholder='Amount Available' name='amount_available' value={this.state.amount_available} onChange={this.handleChange}/><br/>
+                    <input class="form-control" type='text' placeholder='Amount Available' name='amount_available' value={this.state.amount_available} onChange={this.handleChange}/><br/>
                     {/* <label>Unit:</label> */}
-                    <input type='text' placeholder='Unit' name='unit' value={this.state.unit} onChange={this.handleChange}/><br/><br/>
-                    <input type='submit'/>
+                    <input class="form-control" type='text' placeholder='Unit' name='unit' value={this.state.unit} onChange={this.handleChange}/><br/><br/>
+                    <input class="btn btn-info my-4 btn-block" type='submit'/>
                 </form>
             </div>
         )
@@ -75,3 +75,4 @@ export default connect(null, {addItem})(ItemForm)
 // mapDispatchToProps?: Function | Object
 // mergeProps?: Function
 // options?: Object
+

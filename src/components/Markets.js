@@ -19,7 +19,7 @@ const Markets = (props) => {
                 {props.markets.map(market => 
                 // pass in key when iterating to avoid warnings
                 <div key={market.id}>
-                    <Link to={`/markets/${market.id}`}><Button variant="outline-secondary">{market.name}</Button></Link>
+                    <Link to={`/markets/${market.id}`}><Button variant="btn btn-info my-4 btn-block">{market.name}</Button></Link>
                 </div> )}
             </div>
             </div><br/>
