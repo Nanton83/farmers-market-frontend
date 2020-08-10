@@ -41,18 +41,19 @@ handleSubmit = (event) => { // ABCDE   // ACBD
 }
     render() {
         return (
-            <div>
+            <div class="text-center">
+                <h5>Add New Item Here</h5>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Name:</label>
+                    {/* <label>Name:</label> */}
                     <input type='text' placeholder='Name' name='name' value={this.state.name} onChange={this.handleChange}/><br/>
-                    <label>Description:</label>
+                    {/* <label>Description:</label> */}
                     <input type='text' placeholder='Description' name='description' value={this.state.description} onChange={this.handleChange}/><br/>
-                    <label>Price:</label>
+                    {/* <label>Price:</label> */}
                     <input type='text' placeholder='Price' name='price' value={this.state.price} onChange={this.handleChange}/><br/>
-                    <label>Amount Available:</label>
+                    {/* <label>Amount Available:</label> */}
                     <input type='text' placeholder='Amount Available' name='amount_available' value={this.state.amount_available} onChange={this.handleChange}/><br/>
-                    <label>Unit:</label>
-                    <input type='text' placeholder='Unit' name='unit' value={this.state.unit} onChange={this.handleChange}/><br/>
+                    {/* <label>Unit:</label> */}
+                    <input type='text' placeholder='Unit' name='unit' value={this.state.unit} onChange={this.handleChange}/><br/><br/>
                     <input type='submit'/>
                 </form>
             </div>

@@ -15,16 +15,14 @@ const Markets = (props) => {
         <div className="container">
             <h1 className="centerform">Produce Markets</h1><br/>
             <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 text-center">
                 {props.markets.map(market => 
                 // pass in key when iterating to avoid warnings
-                
-                <ul key={market.id}>
+                <div key={market.id}>
                     <Link to={`/markets/${market.id}`}><Button variant="outline-secondary">{market.name}</Button></Link>
-                    {/* Any props form click come from route */}
-                    </ul> )}
+                </div> )}
             </div>
-            </div>
+            </div><br/>
         </div>
     )
 
