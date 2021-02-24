@@ -2,9 +2,9 @@
     background-color: #F8F9FA;
     margin: 0 auto;
     max-width: 700px;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 10px;
-    padding: 1em;
+    box-shadow: 10px 10px 5px 0px rgba(29, 29, 29, 0.75);
+    border-radius: 5px;
+    padding: 2em;
     
   }
 
@@ -25,7 +25,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 40px;
+    padding: 10em;
     
 }
 
